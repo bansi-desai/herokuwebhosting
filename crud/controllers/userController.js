@@ -3,10 +3,8 @@ const bcrypt = require('bcryptjs');
 const path = require('path');
 var dbPath = path.join(__dirname, '.', '', 'dbConnection');
 console.log("--- mylog ---")
-console.log(__dirname)
-console.log(dbPath)
 const dbConnection = require("../lib/dbconnection");
-
+console.log(dbConnection.execute("SHOW TABLES"))
 const nodemailer = require('nodemailer');
 const flash = require("connect-flash");
 const session = require("express-session");
