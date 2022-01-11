@@ -4,7 +4,6 @@ const path = require('path');
 var dbPath = path.join(__dirname, '.', '', 'dbConnection');
 console.log("--- mylog ---")
 const dbConnection = require("../lib/dbconnection");
-console.log(dbConnection.execute("SHOW TABLES"))
 const nodemailer = require('nodemailer');
 const flash = require("connect-flash");
 const session = require("express-session");
@@ -252,7 +251,8 @@ exports.register = async (req, res, next) => {
 };
 
 // Login Page
-exports.loginPage = (req, res, next) => {
+exports.loginPage = async (req, res, next) => {
+    console.log(await dbConnection.execute("SHOW TABLES"))
     res.render("login");
 };
 
