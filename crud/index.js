@@ -6,7 +6,7 @@ const path = require('path');
 const routes = require('./routes');
 const app = express();
 const nodemailer = require('nodemailer');
-const port =process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
