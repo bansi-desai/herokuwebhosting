@@ -1,9 +1,11 @@
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs');
 const path = require('path');
-var dbPath = path.join(__dirname, '..', 'lib', 'dbConnection');
+var dbPath = path.join(__dirname, '.', '', 'dbConnection');
+console.log("--- mylog ---")
+console.log(__dirname)
 console.log(dbPath)
-const dbConnection = require(dbPath);
+const dbConnection = require("../lib/dbconnection");
 
 const nodemailer = require('nodemailer');
 const flash = require("connect-flash");
