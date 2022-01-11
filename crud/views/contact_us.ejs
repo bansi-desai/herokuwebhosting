@@ -1,0 +1,46 @@
+<%- include('navbar'); -%>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <div class="contact-page">
+    <h2>Get in touch</h2>
+    <div class="footer-center">
+      <div class="item">
+        <i class="fa fa-map-marker"></i>
+       <strong>Jamnagar, Gujarat</strong> 
+      </div>
+      <div class="item">
+        <i class="fa fa-phone"></i>
+        <strong>+91 74**9**258</strong>
+      </div>
+      <div class="item ">
+        <i style="font-size: 17px"class="fa fa-envelope"></i>
+        <strong>xyz@gmail.com</strong>
+      </div>
+      <div class="item">
+        <i class="fa fa-clock-o"></i>
+      <strong>Mon - Fri 8:00 AM to 6:00 PM</strong>  
+      </div>
+    </div>  
+    <% if(typeof msg != 'undefined'){ %>
+      <div class="success-msg"><%= msg %></div><% }
+      if(typeof error !== 'undefined'){ %>
+      <div class="err-msg"><%= error %></div><% } %>  
+    <form action="/contact" class="contact-form " method="POST">
+        <input type="text" name="name" class="textb" placeholder="Your Name">
+        <input type="email" name="email" class="textb" placeholder="Your Email">
+        <textarea name="msg" placeholder="Your Message"></textarea>
+        <input type="submit" class="btn" value='Send'>
+      </form>      
+  </div>
+</body>
+</html>
+<%- include('footers'); -%>

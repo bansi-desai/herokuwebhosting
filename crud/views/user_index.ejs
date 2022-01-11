@@ -1,0 +1,68 @@
+<%- include('navbar'); -%>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container1">
+        <% if(message.length> 0) { %>
+            <div class="alert alert-success">
+                <strong>Success!</strong>
+                <%= message %>
+            </div>
+            <% } %>
+                <a href="/add" class="btn2">Add employee</a><br />
+                <table id="emp">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Salary</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <% data.forEach(function(row){%>
+                        <tr>
+                            <td>
+                                <%= row.name%>
+                            </td>
+                            <td>
+                                <%= row.position%>
+                            </td>
+                            <td>
+                                <%= row.office%>
+                            </td>
+                            <td>
+                                <%= row.salary%>
+                            </td>
+                            <td>
+                                <%= row.phone%>
+                            </td>
+                            <td>
+                                <%= row.email%>
+                            </td>
+                            <td>
+                                <a href="update/<%= row.id %> " id="btn">Update</a>
+                                <a onclick="return alert('Are You sure?')" href="deleteemp/<%= row.id %>"
+                                    id="btn1">Delete</a>
+                            </td>
+                        </tr>
+                        <%});%>
+                </table>
+    </div>
+
+</body>
+
+</html>
+<%- include('footers'); -%>

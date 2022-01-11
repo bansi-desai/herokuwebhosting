@@ -1,0 +1,65 @@
+<%- include('navbar'); -%>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <link rel="stylesheet" type="text/css" href="/css/emp_add.css">    
+</head>
+
+
+<body>
+
+ 
+    <div class="container ">
+        <form action="/update" method="post">
+          
+            <% if(typeof error !=='undefined' ){ %>                
+                <div class="err-msg">
+                    <%= error %>
+                </div>              
+                <% } %>            
+            <input type="hidden"  name="id" value="<%= row.id%>" >
+            <hr>
+            <div>
+                <label for="name"><b>Name</b></label>
+                <input class="input" type="text" placeholder="Enter Full Name" name="name" value="<%= row.name%>" required>
+            </div>
+
+            <div>
+                <label for="position"><b>Position</b></label>
+                <input class="input" type="text" placeholder="Eg:snr.Developer" name="position" value="<%= row.position%>" required>
+            </div>
+
+            <div>
+                <label for="office"><b>Office</b></label>
+                <input class="input" type="text" placeholder="Enter Office Location" name="office"value="<%= row.office%>"required>
+            </div>
+
+            <div>
+                <label for="salary"><b>Salary</b></label>
+                <input class="input" type="text" placeholder="Salary per annum" name="salary" value="<%= row.salary%>"required>
+            </div>
+
+            <div>
+              <label for="phone"><b>Phone </b></label>
+              <input class="input" type="text" placeholder="Contact Number" name="phone" value="<%= row.phone%>"  required>
+          </div>
+
+          <div>
+              <label for="email"><b>Email</b></label>
+              <input class="input"  type="text" placeholder="Email Address" name="email" value="<%= row.email%>"required>
+          </div>             
+
+            <div>
+                <button class= "subbtn" type="submit">Submit</button>
+            </div> 
+            <hr>           
+        </form>
+    </div>
+</body>
+
+</html>
+<%- include('footers'); -%>

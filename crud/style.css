@@ -1,0 +1,53 @@
+* {box-sizing: border-box}
+body{
+    background-color:#00003B;
+}
+label{
+  color: white;
+}
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  width: 50%;
+}
+
+/* Full-width input fields */
+input[type=text]  {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border-bottom: double;
+  background: #00003B;
+}
+
+input[type=text]:focus{
+  background-color: #ddd;
+  outline: none;
+  
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: white;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+ /* width: 100%;*/
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+
+

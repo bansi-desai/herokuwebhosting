@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>    
+        <div class="box1" id="heading">
+
+            <h1>Today</h1>
+        </div>
+
+        <div class="box">
+
+            <% for(var i=0 ; i<item.length; i++){ %>
+                <form action="/" method="post">
+                    <div class="item">
+                        <div class="round">
+                            <input type="checkbox" name="checkbox" value="<%= item[i].todolist %>" /> >
+
+                            <label for="checkbox"></label>
+                        </div>
+                        <p>
+                            <%= item[i] %>
+                        </p>
+                        <br>
+                    </div>
+
+                </form>
+                <% } %>
+                    <!--
+             <form >
+             <div class="item">
+                 <div class="round">
+                 <input type="checkbox" id="checkbox">
+                 
+                 <label for="checkbox"></label>
+                 </div>
+                 <p>Enjoy the party</p>
+                <br>
+             </div>
+             
+             </form>
+          
+             <form >
+             <div class="item">
+                 <div class="round">
+                 <input type="checkbox" id="checkbox">
+               
+                 <label for="checkbox"></label>
+                 </div>
+                 <p>Project Time</p>
+                <br>
+             </div>
+             
+             </form>
+          
+             <form >
+             <div class="item">
+                 <div class="round">
+                 <input type="checkbox" id="checkbox">
+                 
+                 <label for="checkbox"></label>
+                 </div>
+                 <p>Enjoying coding</p>
+                <br>
+             </div>
+             
+             </form>
+          
+             <form >
+             <div class="item">
+                 <div class="round">
+                 <input type="checkbox"id="checkbox">
+                
+                 <label for="checkbox"></label>
+                 </div>
+                 <p>HEY GUYS</p>
+                <br>
+             </div>
+             
+             </form>
+             -->
+
+                    <form class="item" action="/save" method="post">
+                        <input type="text" name="n" placeholder="new">
+                        <hr>
+                        <button id="b" type="submit" <span id="s2"></span>+</span></button>
+                    </form>
+        </div>
+</body>
+
+</html>
