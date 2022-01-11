@@ -252,7 +252,7 @@ exports.register = async (req, res, next) => {
 
 // Login Page
 exports.loginPage = async (req, res, next) => {
-    console.log(await dbConnection.execute("SHOW TABLES"))
+    // console.log(await dbConnection.execute("SHOW TABLES"))
     res.render("login");
 };
 
